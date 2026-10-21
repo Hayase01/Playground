@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma To-do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+    <body>    
+        <main class="container">
+            <h1>Ma To-do List</h1>
+            <p class="subtitle">Organise tes tâches, une étape à la fois.</p>
+
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Ajouter une tâche..." autocomplete="off">
+                <button type="submit">Ajouter</button>
+            </form>
+
+            <div class="filters">
+                <button type="button" class="filter active" data-filter="all"> Toutes </button>
+                <button type="button" class="filter" data-filter="active"> À faire </button>
+                <button type="button" class="filter" data-filter="completed"> Terminées </button>
+            </div>
+
+            <p id="taskCounter">0 tâche</p>
+
+            <ul id="taskList"></ul>
+
+            <p id="emptyMessage">Aucune tâche pour le moment.</p>
+
+            <button type="button" id="clearCompleted"> Supprimer les tâches terminées </button>
+        </main>
+    </body>
+</html>

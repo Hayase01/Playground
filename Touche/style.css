@@ -1,0 +1,183 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: #f1f5f9;
+    padding: 30px 15px;
+}
+
+.game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.8rem;
+    color: #60a5fa;
+}
+
+.subtitle {
+    color: #a78bfa;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+header p:last-child {
+    color: #cbd5e1;
+}
+
+.game-info {
+    margin: 30px auto;
+    padding: 15px;
+    background: #1e293b;
+    border-radius: 12px;
+}
+
+#message {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#turn {
+    color: #93c5fd;
+}
+
+.boards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.board-container {
+    width: min(100%, 360px);
+}
+
+.board-container h2 {
+    margin-bottom: 15px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 4px;
+    padding: 8px;
+    background: #334155;
+    border-radius: 8px;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1;
+    min-width: 0;
+    padding: 0;
+    border: 1px solid #475569;
+    border-radius: 3px;
+    background: #2563eb;
+    cursor: pointer;
+}
+
+.cell:hover:enabled {
+    background: #3b82f6;
+    outline: 2px solid #bfdbfe;
+}
+
+.cell.ship {
+    background: #64748b;
+}
+
+.cell.hit {
+    background: #ef4444;
+    cursor: default;
+}
+
+.cell.miss {
+    background: #cbd5e1;
+    cursor: default;
+}
+
+.cell:disabled {
+    opacity: 1;
+}
+
+.board-description {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 30px 0;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.water {
+    background: #2563eb;
+}
+
+.ship {
+    background: #64748b;
+}
+
+.hit {
+    background: #ef4444;
+}
+
+.miss {
+    background: #cbd5e1;
+}
+
+#restart-button {
+    border: none;
+    border-radius: 8px;
+    padding: 13px 22px;
+    background: #7c3aed;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background: #6d28d9;
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 2.1rem;
+    }
+
+    .boards {
+        gap: 25px;
+    }
+
+    .board-container {
+        max-width: 330px;
+    }
+}

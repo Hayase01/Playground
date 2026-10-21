@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+    <body>
+        <main class="container">
+            <h1>Mastermind</h1>
+            <p class="subtitle">
+                Retrouve la combinaison secrète !
+            </p>
+            <div class="game-info">
+                <p>Tentatives restantes : <span id="attempts">10</span></p>
+                <p id="message">Choisis 4 couleurs pour commencer.</p>
+            </div>
+            <section id="board" aria-label="Historique des tentatives"></section>
+            <section class="input-area">
+                <h2>Ta combinaison</h2>
+                <div id="currentGuess" class="current-guess"></div>
+                <div id="colorChoices" class="color-choices"></div>
+                <div class="buttons">
+                    <button id="submitGuess">Valider</button>
+                    <button id="clearGuess">Effacer</button>
+                </div>
+            </section>
+            <button id="restart">Nouvelle partie</button>
+        </main>    
+    </body>
+</html>

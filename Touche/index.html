@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touché-Coulé</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+    <body>
+        <main class="game-container">
+            <header>
+                <p class="subtitle">BATAILLE NAVALE</p>
+                <h1>Touché-Coulé</h1>
+                <p>Coule la flotte ennemie avant qu'elle ne coule la tienne.</p>
+            </header>
+
+            <section class="game-info">
+                <p id="message">Préparation des flottes...</p>
+                <p id="turn">À toi de jouer !</p>
+            </section>
+
+            <section class="boards">
+                <div class="board-container">
+                    <h2>Ta flotte</h2>
+                    <div id="player-board" class="board"></div>
+                    <p class="board-description">Tes navires sont visibles.</p>
+                </div>
+
+                <div class="board-container">
+                    <h2>Flotte ennemie</h2>
+                    <div id="enemy-board" class="board"></div>
+                    <p class="board-description">Clique sur une case pour tirer.</p>
+                </div>
+            </section>
+
+            <section class="legend">
+                <span><i class="legend-box water"></i> Eau</span>
+                <span><i class="legend-box ship"></i> Navire</span>
+                <span><i class="legend-box hit"></i> Touché</span>
+                <span><i class="legend-box miss"></i> Raté</span>
+            </section>
+
+            <button id="restart-button">Recommencer la partie</button>
+        </main>
+
+    </body>
+</html>

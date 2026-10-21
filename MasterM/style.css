@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #151020;
+    color: white;
+}
+
+.container {
+    width: 92%;
+    max-width: 650px;
+    padding: 30px;
+    background: #241a35;
+    border-radius: 18px;
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #c7a5ff;
+    text-align: center;
+}
+
+.subtitle {
+    color: #c5b9d8;
+    text-align: center;
+}
+
+.game-info {
+    margin: 25px 0;
+    text-align: center;
+}
+
+#message {
+    color: #c7a5ff;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guess-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: #352747;
+    border-radius: 10px;
+}
+
+.guess-number {
+    width: 25px;
+    color: #c5b9d8;
+}
+
+.pegs {
+    display: flex;
+    gap: 8px;
+}
+
+.peg {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border: 2px solid #78688d;
+    border-radius: 50%;
+    background: #1b1427;
+}
+
+.feedback {
+    display: grid;
+    grid-template-columns: repeat(2, 10px);
+    gap: 4px;
+    margin-left: auto;
+}
+
+.feedback-peg {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #574867;
+}
+
+.feedback-peg.black {
+    background: #fff;
+}
+
+.feedback-peg.white {
+    background: #e9b8ff;
+}
+
+.input-area {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.input-area h2 {
+    font-size: 18px;
+}
+
+.current-guess,
+.color-choices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.current-guess .peg {
+    width: 42px;
+    height: 42px;
+}
+
+.color-button {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-button.selected {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #8b5cf6;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a78bfa;
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+#restart {
+    display: block;
+    margin: 25px auto 0;
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 18px;
+    }
+
+    .peg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .guess-row {
+        gap: 7px;
+    }
+}
